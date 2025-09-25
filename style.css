@@ -1,0 +1,285 @@
+/*
+ * ESTILOS GERAIS E BOAS PRÁTICAS
+ */
+:root {
+    --color-purple: #4e29c8;
+    --color-dark-blue: #315AF2;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-light-gray: #f0f0f0;
+    --color-pink: #DE45FF;
+}
+
+/* Reseta o estilo padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configura fontes e cor de fundo */
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    color: var(--color-dark-blue);
+    font-weight: 900;
+}
+
+/* Define a largura máxima do conteúdo */
+.content-wrapper, .cta-content, .footer-logos {
+    max-width: 875px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.cta-box{
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Otimização de imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*
+ * 1º SEÇÃO: BANNER PRINCIPAL
+ */
+.hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-light-gray);
+    background-image: url('img/texture-1.png');
+    background-repeat: repeat;
+    height: 150px;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-banner .img-left,
+.hero-banner .img-right{
+    margin-bottom: -80px;
+}
+
+.hero-banner .img-left{
+    margin-right: -30px;
+}
+
+/*
+ * 2º SEÇÃO: CONTEÚDO PRINCIPAL
+ */
+.content-section {
+    padding: 1rem 1rem;
+}
+
+.content-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-section h2 {
+    font-size: 18px;
+    line-height: 1.5rem;
+    margin: 0rem 0 1rem;
+    color: var(--color-dark-blue);
+}
+
+.content-section p, .content-section li {
+    font-size: 14px;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.content-section ul {
+    margin-bottom: 2rem;
+    list-style-type: decimal;
+}
+
+.content-section ul li {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+
+.content-section ul li::marker {
+    color: var(--color-pink);
+    font-weight: 900;
+}
+
+/*
+ * 4º SEÇÃO: CTA COM BOTÃO E IMAGEM
+ */
+.cta-section {
+    background-image: url('img/texture-1.png');
+    padding: 3rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-content p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    color: var(--color-black);
+}
+
+.cta-content h3 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-dark-blue);
+    text-align: center;
+}
+
+.cta-button {
+    background-color: var(--color-white);
+    color: var(--color-pink);
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 99px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+.cta-image-wrapper {
+    margin-top: 2rem;
+    /* width: 200px; */
+}
+
+/*
+ * 5º SEÇÃO: RODAPÉ
+ */
+.footer-section {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: var(--color-white);
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-logos img {
+    max-height: 26px;
+    width: auto;
+}
+
+/*
+ * SEÇÃO: FORM JOTFORM
+ */
+.form-section-jotform {
+    /* background-color: var(--color-pink); */
+    padding: 0;
+    text-align: center;
+}
+
+/*
+ * MEDIA QUERIES PARA RESPONSIVIDADE (DESKTOP)
+ */
+@media (min-width: 769px) {
+
+    .hero-banner {
+        height: 316px;
+    }
+
+    .hero-banner .img-left,
+    .hero-banner .img-right{
+        margin-bottom: -150px;
+    }
+
+    /* Layout CTA para desktop */
+    .cta-section {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 4rem 1rem;
+    }
+
+    .cta-content {
+        max-width: 50%;
+        text-align: center;
+        font-display: block;
+        align-content: center;
+
+    }
+
+    .cta-image-wrapper {
+        margin-top: -150px;
+        width: 100%;
+    }
+
+    .cta-content h3 {
+        font-size: 36px;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 23px;
+        padding: 1rem 2.5rem;
+    }
+
+    .cta-box {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+        line-height: 2rem;
+        margin: 2rem 0 1rem;
+        color: var(--color-dark-blue);
+    }
+
+    .content-section p, .content-section li {
+        font-size: 18px;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-section {
+        padding: 4rem 1rem;
+    }
+
+    .footer-logos img {
+        max-height: 40px;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .content-wrapper, .cta-content, .footer-logos {
+        padding: 2rem 0;
+    }
+}
